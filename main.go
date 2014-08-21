@@ -21,7 +21,7 @@ func main() {
 	p0 := Point{true, 9, 9, 0, 0}
 
 	m[&p1] = append(m[&p1], p0.Ping(&p1))
-	//x["key"] = append(x["key"], "value")
+
 	log.Printf("Distance between P0 to P1: %v\n", m[&p1][0])
 
 	m[&p1] = append(m[&p1], p0.Ping(&p2))
@@ -30,7 +30,8 @@ func main() {
 	m[&p1] = append(m[&p1], p0.Ping(&p3))
 	log.Printf("Distance between P0 to P3: %v\n", m[&p1][2])
 
-	//Let's treat p0 as the origin every time we recalulate
+	//Once we calculate prey, make that the origin and keep it
+	//after prey moves away
 
 }
 
