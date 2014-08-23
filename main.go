@@ -47,14 +47,16 @@ func MakeTriangle(pointA Point, pointB Point, pointC Point) Triangle {
 var Points []Point
 
 func main() {
+	p0 := Point{"P0", true, 4, 2, 0, 0}
 	p1 := Point{"P1", false, 1, 1, 0, 0}
 	p2 := Point{"P2", false, 2, 4, 0, 0}
 	p3 := Point{"P3", false, 3, 3, 0, 0}
-	p0 := Point{"P0", true, 4, 2, 0, 0}
 
-	_ = MakeTriangle(p0, p1, p2)
-	_ = MakeTriangle(p1, p2, p3)
+	triA := MakeTriangle(p0, p1, p2)
+	triB := MakeTriangle(p0, p1, p3)
+	triC := MakeTriangle(p1, p2, p3)
 
+	_, _, _ = triA, triB, triC
 }
 
 func (p *Point) Ping(otherPoint *Point) float64 {
