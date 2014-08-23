@@ -43,7 +43,7 @@ func MakeTriangle(pointA Point, pointB Point, pointC Point) Triangle {
 	return result
 
 	//This doesn't work yet.
-	//Figure out why the totals isn't 360
+	//Figure out why the totals isn't 180!!!
 }
 
 var Points []Point
